@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	UintWrongInputFormat = errors.New("Scalar.Uint: expected a unsigned 32-bit integer")
+	UintWrongInputFormat = errors.New("Scalar.Uint: wrong input format, expected a unsigned 32-bit integer")
 	UintWrongInputType   = errors.New("Scalar.Uint: wrong input type")
 )
 

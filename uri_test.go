@@ -54,7 +54,7 @@ func TestUri_MarshalJSON(t *testing.T) {
 	}{uri}
 	d, err := json.Marshal(test)
 	assert.NoError(t, err)
-	assert.Equal(t, string(d), `{"uri":"http://www.ietf.org/rfc/rfc2396.txt"}`)
+	assert.JSONEq(t, string(d), `{"uri":"http://www.ietf.org/rfc/rfc2396.txt"}`)
 
 	// Empty
 	uri = Uri{}
@@ -63,5 +63,5 @@ func TestUri_MarshalJSON(t *testing.T) {
 	}{uri}
 	d, err = json.Marshal(test)
 	assert.NoError(t, err)
-	assert.Equal(t, string(d), `{"uri":""}`)
+	assert.JSONEq(t, string(d), `{"uri":""}`)
 }
